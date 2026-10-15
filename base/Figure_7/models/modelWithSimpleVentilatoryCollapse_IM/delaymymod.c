@@ -584,10 +584,10 @@ void derivs (int *neq, double *t, double *y, double *ydot, double *yout, int *ip
 	if(y[22]>-1e-9 && y[22]<1e-9) {y[22]=0;}
 
 	ydot[0] = -(ktr*F*y[0])-((1-F)*ktr*y[0]);
-	ydot[1] = (ktr*F*y[0])-(ktr*y[1]);
-	ydot[2] = -(1*kin*y[2])+(ktr*y[1]);
-	ydot[3] = (1.00/V1C)*((1*kin*y[2])-(kout2*y[3])- (k12N*y[3]))+1/V1C*((k12N*y[28]));
-	ydot[4] = (k2*y[3]*1e6/(327.27))-(k2*y[4]);
+	ydot[1] = (ktr*F*y[0])-(ktr*y[1]); // NT1 gets input only from D (=y[0])
+	ydot[2] = -(1*kin*y[2])+(ktr*y[1]); // NT2 fed only by NT1
+	ydot[3] = (1.00/V1C)*((1*kin*y[2])-(kout2*y[3])- (k12N*y[3]))+1/V1C*((k12N*y[28])); // PlasmaN fed only by NT2
+	ydot[4] = (k2*y[3]*1e6/(327.27))-(k2*y[4]); // effect-site fed only by PlasmaN
 	ydot[5] = -(koutC*y[5])-(k12C*y[5])+(k21C*y[6])+(k31C*y[7])-(k13C*y[5])+y[23]/Infu_t;
 	ydot[6] = (k12C*y[5])-(k21C*y[6]);
 	ydot[7] = (k13C*y[5])-(k31C*y[7]);
@@ -595,6 +595,7 @@ void derivs (int *neq, double *t, double *y, double *ydot, double *yout, int *ip
 	ydot[9] = (A1*(1-y[9]-y[10])*(pow(y[8],n)))-(B1*y[9]);
 	ydot[10] = (A2*(1-y[9]-y[10])*(pow(y[4],n2)))-(B2*y[10]);
 	ydot[11] = offCo2*(1.00/V_A*(Venti*(P_I_co2 - y[11]) + lumbda*(Qb+Qt)*(1-s1)*(C_V_co2 - C_e_co2)));
+	// ydot[11] = 0; #high gas co2 scenario
 	ydot[12] = offO2*(1.00/V_A*(Venti*(y[17] - y[12]) + lumbda*(Qb+Qt)*(1-s1)*(C_V_o2 - C_e_o2)));
 	ydot[13] = ReactionFlux19; /* dC_B_co2 */
 	ydot[14] = ReactionFlux20; /* dC_B_o2 */

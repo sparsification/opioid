@@ -1,0 +1,37 @@
+[1] 2001
+[1] "-----Produce supplemental figures?-----"
+[1] "yes"
+[1] "------------"
+[1] "Generic"
+[1] "patientType= chronic"
+[1] "opioid= fentanyl"
+[1] "opioid dose= 0.2 mg"
+[1] 2001
+          F      kin  kout      ktr kout2    k1       k2    k12    k13    k21
+2001 0.6257 0.005164 0.002 0.005121 32.03 0.003 0.001774 0.0032 0.0036 0.0023
+         k31       A1       B1      n       A2      B2    n2     V1 Mmass  V_A
+2001 0.00023 3.08e-05 0.004331 0.8439 0.000167 0.03959 0.858 156500 336.4 3.28
+     P_I_co2 Wmax lumbda Q1    s1 z alpha_co2 C_B_hco3 C_T_hco3 alpha_o2    K1
+2001       0 6.62    863  0 0.024 0  0.000667   0.5824   0.5824 3.17e-05 14.99
+        K2     a1    a2  alpha1    beta1  alpha2   beta2       Z C1Spencer
+2001 194.4 0.3836 1.819 0.03198 0.008275 0.05591 0.03255 0.02272         9
+     C2Spencer    Qb0        Qt0  rou  V_B      M_B_co2      M_B_o2_0   V_T
+2001     86.11 0.0125 0.07083333 0.32 1.32 0.0006666667 -0.0008333333 38.68
+         M_T_co2     M_T_o2_0    P3 offDp      P1 Bmax      P2 offDc Aco2 Bco2
+2001 0.002666667 -0.003333333 1.323     1 4.22625 0.66 0.06319     1  -21   45
+     Cco2 Dco2 P_a_co2_0 tau_co2 c1o2 c2o2 P_a_o2_0 tau_o2  K_Dp   K_Dc K_fpc
+2001   40  4.5        40      20 11.9   11       95     10 0.588 0.9239 1.738
+     Bp f_pc_max f_pc_min f_pc_0 P_a_o2_c  K_pc tau_Dp tau_Dc G_Dp G_Dc
+2001 18     12.3   0.8352   3.67       45 29.27      7     60  2.5    2
+     P_B_co2_0 theta_Hmin Gh P_B_o2_0 tau_h theta_Hmax    W   fL   fN offCo2
+2001     45.27       29.8 10       32   300         37 6.62 0.87 0.93      1
+     offO2 Infu_t   VP Cim25 Cim26 Cim27 Cim28 CA_delay_o2 CA_delay_co2
+2001     1    300 10.5 0.024 0.024     1     1       10000        10000
+     tsh_value_o2 tsh_value_co2 Shock  k12N k21N     V2 timeout starttime
+2001           25          52.5     0 524.6    0 320000     600        30
+     initialdelay
+2001           60
+[1] "O2 doesn't cross the threshold"
+[1] "dd"
+Error in pp[[1]][[2]] : subscript out of bounds
+Execution halted
